@@ -1,0 +1,30 @@
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+buildscript {
+    ext {
+        versions = [
+            'kotlin': '1.2.41',
+        ]
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+    }
+}
+
+subprojects {
+    tasks.withType(JavaCompile) {
+        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+    }
+}
