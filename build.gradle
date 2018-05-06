@@ -10,6 +10,10 @@ buildscript {
         versions = [
             'kotlin': '1.2.41',
         ]
+        projectVersions = [
+            'version': '0.0.1-SNAPSHOT',
+            'group': 'com.example'
+        ]
     }
 
     repositories {
