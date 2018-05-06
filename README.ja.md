@@ -4,8 +4,18 @@ GradleでKotlinを用いたマルチプロジェクト型レイアウトのテ�
 
 ## 使い方
 
-GitHub上の`Clone or download`ボタンから、このリポジトリをzip形式でダウンロードし、展開します。展開後のディレクトリ名は、任意のものに変更してください。  
-次にIntelliJ IDEAなどのIDEでディレクトリをインポートします。以上で完了です。
+GitHub上の`Clone or download`ボタンからこのリポジトリをzip形式でダウンロードし、展開します。展開後のディレクトリ名は任意のものに変更し、任意のディレクトリへ移動してください。  
+次にIntelliJ IDEAなどのIDEでディレクトリを**Gradleモデルのプロジェクトとして**インポートします。以上で完了です。
+
+## プロジェクトの実行方法
+
+以下コマンドで実行できます。
+
+```sh
+./gradlew :subproject1:run
+```
+
+またはIntelliJ IDEAを利用している場合、Gradleパネル内、`:subproject1 > Tasks > application > run`をダブルクリックすると実行できます。
 
 ## プロジェクト名の変更方法
 `/settings.gradle`を開き、`rootProject.name`プロパティを任意のプロジェクト名に変更してください。
